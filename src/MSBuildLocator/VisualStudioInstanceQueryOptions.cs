@@ -19,6 +19,9 @@ namespace Microsoft.Build.Locator
 #if FEATURE_VISUALSTUDIOSETUP
                 DiscoveryType.DeveloperConsole | DiscoveryType.VisualStudioSetup
 #endif
+#if FEATURE_VISUALSTUDIOSETUP && NETCOREAPP
+                |
+#endif
 #if NETCOREAPP
                 DiscoveryType.DotNetSdk
 #endif

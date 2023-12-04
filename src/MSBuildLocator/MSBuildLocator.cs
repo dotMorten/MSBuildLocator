@@ -347,10 +347,10 @@ namespace Microsoft.Build.Locator
             if (devConsole != null)
                 yield return devConsole;
 
-    #if FEATURE_VISUALSTUDIOSETUP
+#endif
+#if FEATURE_VISUALSTUDIOSETUP
             foreach (var instance in VisualStudioLocationHelper.GetInstances())
                 yield return instance;
-    #endif
 #endif
 
 #if NETCOREAPP
